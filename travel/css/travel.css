@@ -289,27 +289,30 @@ fa {
     opacity: 0;
 }
 
-.hotel-reservation .book-wedget .afterClick .destination input{
+.hotel-reservation .book-wedget .afterClick .destination input {
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
 }
+
+
 /*afterClick  */
 
-.hotel-reservation .book-wedget .afterClick .destination input,
-.hotel-reservation .book-wedget .afterClick li.hotels .ta_date {
+.hotel-reservation .book-wedget form>ul.afterClick .destination input,
+.hotel-reservation .book-wedget form>ul.afterClick li.hotels .ta_date {
     width: 310px;
 }
 
-.hotel-reservation .book-wedget .afterClick .hotels input {
+.hotel-reservation .book-wedget form>ul.afterClick .hotels input {
     display: block;
 }
 
-.hotel-reservation .book-wedget .afterClick .oCheckbox {
+.hotel-reservation .book-wedget form>ul.afterClick .oCheckbox {
     display: none;
 }
+
 
 /* .hotel-reservation .book-wedget .afterClick li.hotels .ta_date {
     text-align: center;
@@ -322,7 +325,7 @@ fa {
     background-color: #ffffff;
     padding: 15px;
     display: none;
-     margin-top: 4px; 
+    margin-top: 4px;
 }
 
 .wedget-city-list h5 {

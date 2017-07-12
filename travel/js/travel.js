@@ -16,17 +16,31 @@ $(function () {
         }
     });
     $('#hotel').find('input').on('focus', function () {
+        var name = $(this).attr('name');
         $('.hotels').removeClass('width-0');
         $('.oCheckbox').addClass('width-0');
-        $('#hotel').child('ul').addClass('afterClick');
-    });
-    $('#hotel').find('input[name="hotels"]').on('focus', function () {
-        $('.wedget-city-list').css({
-            'display': 'block',
-            'margin-left': '323px'
-        });
-    });
-    $('.wedget-city-list').on('mouseout', function () {
-        $('.wedget-city-list').css('display', 'none');
-    })
+        $('#hotel>ul').addClass('afterClick');
+        if (name === 'hotels') {
+            $('.wedget-city-list').css({
+                'display': 'block',
+                'margin-left': '323px'
+            });
+        } else { 
+            $('.wedget-city-list').css({
+                'display': 'block',
+                'margin-left': '0px'
+            });
+        }
+            
+        // });
+        // $('#hotel').find('input[name="hotels"]').on('focus', function () {
+        //     $('.wedget-city-list').css({
+        //         'display': 'block',
+        //         'margin-left': '323px'
+        //     });
+        // });
+        $('.wedget-city-list').on('mouseout', function () {
+            $('.wedget-city-list').css('display', 'none');
+        })
+    })  
 })

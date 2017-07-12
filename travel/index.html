@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./css/carousel.css"> -->
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./time/css/dateRange.css">
+    <link rel="stylesheet" type="text/css" href="./css/simple-calendar.css">
     <link rel="stylesheet" href="./css/travel.css">
     <title>旅游网站</title>
 </head>
@@ -68,7 +68,7 @@
         </div>
     </header>
     <section style="position:relative">
-        <div id="myCarousel" class="carousel slide">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
                 <!-- <ul> -->
@@ -118,12 +118,11 @@
                             <input type="text" name="hotels" value="" placeholder="酒店、地标、商圈">
                         </li>
                         <li class="hotels width-0">
-                            <!-- <input type="text" name="live-in" value="" placeholder="入住"> -->
-                            <!-- <input type="text" name="leave-out" value="" placeholder="离店"> -->
-                            <div class="ta_date" id="demo1">
+                             <input type="text" name="live-in" value="" placeholder="入住"> 
+                             <input type="text" name="leave-out" value="" placeholder="离店"> 
+                            <!-- <div class="ta_date" id="demo1">
                                 <span class="date_title" id="date_demo1"></span>
-                                <!-- <a class="opt_sel" id="input_trigger_demo1" href="#"><i class="i_orderd"></i></a> -->
-                            </div>
+                            </div> -->
                         </li>
                         <li class="oCheckbox">
                             <input type="checkbox" id="tuanfang">
@@ -141,12 +140,14 @@
                             <p>10间以上享优惠</p>
                         </li>
                         <li class="oButton">
-                            <button type="button">搜索</button>
+                            <button type="button" name="button">搜索</button>
                         </li>
                     </ul>
+                    <!--日历  -->
+                    <div class="myCalendar" id="myCalendar"></div>
                     <div class="wedget-city-list">
                         <h5>热门城市（可直接输入城市或城市拼音）</h5>
-                        <ul class="clearSpacing">
+                        <ul class="clearSpacing sort-js">
                             <li class="active">热门</li>
                             <li>ABC</li>
                             <li>DEFG</li>
@@ -156,7 +157,7 @@
                             <li>TWX</li>
                             <li>YZ</li>
                         </ul>
-                        <ul class="clearSpacing active" name="热门">
+                        <ul class="clearSpacing active city-js" name="热门">
                             <li>
                                 <p>北京</p>
                                 <p>香港</p>
@@ -385,7 +386,7 @@
             </div>
             <div class="partner">
                 <h4 class="color-00a699">合作品牌</h4>
-                <div id="myCarousel-2" class="carousel slide">
+                <div id="myCarousel-2" class="carousel slide" data-ride="carousel">
                     <!-- 轮播（Carousel）指标 -->
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel-2" data-slide-to="0" class="active"></li>
@@ -425,29 +426,28 @@
     </section>
     <footer class="width-1190">
         <ul>
-            <li>联系我们</li>
-            <li>用户协议</li>
-            <li>常见问题</li>
-            <li>酒店加盟</li>
-            <li>"严重违规失信"专项整治举报</li>
-            <li>About us</li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">用户协议</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">酒店加盟</a></li>
+            <li><a href="#">"严重违规失信"专项整治举报</a></li>
+            <li><a href="#">About us</a></li>
         </ul>
         <ul>
-            <li>Copyright ©2017 XX. com</li>
-            <li>京公网安备110108901530</li>
-            <li>京ICP备05021087号</li>
-            <li>营业执照信息</li>
-            <li>保险经纪资质</li>
-            <li>(京)-非经营性-2016-0110</li>
-            <li>客服电话95117</li>
+            <li><a href="#">Copyright ©2017 XX. com</a></li>
+            <li><a href="#">京公网安备110108901530</a></li>
+            <li><a href="#">京ICP备05021087号</a></li>
+            <li><a href="#">营业执照信息</a></li>
+            <li><a href="#">保险经纪资质</a></li>
+            <li><a href="#">(京)-非经营性-2016-0110</a></li>
+            <li><a href="#">客服电话95117</a></li>
         </ul>
         <div><img src="./img/底部.png" alt=""></div>
     </footer>
     <script src="./js/jquery-3.2.1.min.js"></script>
     <!-- <script src="./js/carousel.js"></script> -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./time/js/moment.js"></script>
-    <script src="./time/js/dateRange.js"></script>
+    <script type="text/javascript" src="./js/simple-calendar.js"></script>
     <script src="./js/travel.js"></script>
 </body>
 

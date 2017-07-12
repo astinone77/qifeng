@@ -27,7 +27,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #eeeeee;
+    color: #ddd;
 }
 
 a:hover {
@@ -78,6 +78,7 @@ fa {
     display: block;
     visibility: hidden;
     clear: both;
+    overflow:hidden;
 }
 
 
@@ -93,6 +94,9 @@ fa {
     letter-spacing: 0;
 }
 
+.color-00a699 {
+    color: #00a699;
+}
 
 /*for nav、nav-top*/
 
@@ -108,11 +112,9 @@ fa {
     line-height: 30px;
     padding: 0;
 }
-
-.color-00a699 {
-    color: #00a699;
+.nav-top a:hover{
+    color: #ffffff;
 }
-
 .nav-top-left>span {
     margin-right: 28px;
 }
@@ -191,7 +193,7 @@ fa {
     font-size: 72px;
     text-align: center;
     color: #ffffff;
-    /* top: 30%; */
+     bottom: 30%; 
 }
 
 
@@ -236,12 +238,7 @@ fa {
     color: #ccc;
 }
 
-.book-wedget form>ul li.destination {
-    /* width: 480px; */
-}
-
-.book-wedget form>ul li.oCheckbox,
-.book-wedget form>ul li.oButton {
+.book-wedget form>ul li.oCheckbox {
     width: 165px;
 }
 
@@ -261,10 +258,10 @@ fa {
 }
 
 .book-wedget .destination input,
-.book-wedget .hotels .ta_date {
+.book-wedget .hotels input {
     width: 222px;
     padding: 8px 0;
-    margin-right: 10px;
+    margin-right: 8px;
     color: #c9c9c9;
     text-indent: 20px;
     border-radius: 0;
@@ -273,7 +270,12 @@ fa {
 .book-wedget form>ul li.hotels {
     margin-left: 0;
 }
-
+.book-wedget form>ul li.oButton {
+    width: 171px;
+    position: absolute;
+    top: 43px;
+    right: 8px;
+}
 .book-wedget form>ul li button {
     width: 100%;
     border: none;
@@ -288,8 +290,11 @@ fa {
     visibility: hidden;
     opacity: 0;
 }
-
-.hotel-reservation .book-wedget .afterClick .destination input {
+.book-wedget #myCalendar{
+     display: none; 
+    right: 0;
+}
+.hotel-reservation .book-wedget .destination input {
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -ms-transition: .5s;
@@ -300,9 +305,12 @@ fa {
 
 /*afterClick  */
 
-.hotel-reservation .book-wedget form>ul.afterClick .destination input,
-.hotel-reservation .book-wedget form>ul.afterClick li.hotels .ta_date {
+.hotel-reservation .book-wedget form>ul.afterClick .destination input {
     width: 310px;
+}
+.hotel-reservation .book-wedget form>ul.afterClick li.hotels input {
+    width: 150px;
+    display: inline-block;
 }
 
 .hotel-reservation .book-wedget form>ul.afterClick .hotels input {
@@ -360,7 +368,9 @@ fa {
 .wedget-city-list ul li p {
     padding: 5px 0;
 }
-
+.wedget-city-list ul li p.active{
+    background-color: #eee;
+}
 
 /*for 精选、推荐*/
 
@@ -623,7 +633,9 @@ footer {
     padding: 20px 20px 70px;
     text-align: center;
 }
-
+footer a{
+    color: #333;
+}
 footer ul {
     margin-bottom: 20px;
 }

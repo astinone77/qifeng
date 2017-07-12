@@ -1,156 +1,80 @@
-.carousel {
-    position: relative;
-    margin-bottom: 20px;
-    line-height: 1;
+*{margin:0;padding:0;list-style-type:none;}
+
+a,img{border:0;}
+
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+/* flexslider */
+
+.flexslider{
+    position:relative;
+    /* height:400px; */
+    overflow:hidden;
+    background:url(images/loading.gif) 50% no-repeat;
 }
 
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.slides{
+    position:relative;
+    z-index:1;
 }
 
-.carousel-inner>.item {
-    position: relative;
-    display: none;
-    -webkit-transition: 0.6s ease-in-out left;
-    -moz-transition: 0.6s ease-in-out left;
-    -o-transition: 0.6s ease-in-out left;
-    transition: 0.6s ease-in-out left;
-    transition: 1s;
+.slides li{
+    /* height:400px; */
 }
 
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img {
-    display: block;
-    line-height: 1;
+.flex-control-nav{
+    position:absolute;
+    bottom:10px;
+    z-index:2;
+    width:100%;
+    text-align:center;
 }
 
-.carousel-inner>.active,
-.carousel-inner>.next,
-.carousel-inner>.prev {
-    display: block;
+.flex-control-nav li{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    margin:0 5px;
+    *display:inline;
+    zoom:1;
 }
 
-.carousel-inner>.active {
-    left: 0;
+.flex-control-nav a{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    line-height:40px;
+    overflow:hidden;
+    background:url(images/dot.png) right 0 no-repeat;
+    cursor:pointer;
 }
 
-.carousel-inner>.next,
-.carousel-inner>.prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
+.flex-control-nav .flex-active{
+    background-position:0 0;
 }
 
-.carousel-inner>.next {
-    left: 100%;
+.flex-direction-nav{
+    position:absolute;
+    z-index:3;
+    width:100%;
+    top:45%;
 }
 
-.carousel-inner>.prev {
-    left: -100%;
+.flex-direction-nav li a{
+    display:block;
+    width:50px;
+    height:50px;
+    overflow:hidden;
+    cursor:pointer;
+    position:absolute;
 }
 
-.carousel-inner>.next.left,
-.carousel-inner>.prev.right {
-    left: 0;
+.flex-direction-nav li a.flex-prev{
+    left:40px;
+    background:url(images/prev.png) center center no-repeat;
 }
 
-.carousel-inner>.active.left {
-    left: -100%;
-}
-
-.carousel-inner>.active.right {
-    left: 100%;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 40%;
-    left: 15px;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    font-size: 60px;
-    font-weight: 100;
-    line-height: 30px;
-    color: #ffffff;
-    text-align: center;
-    background: #222222;
-    border: 3px solid #ffffff;
-    -webkit-border-radius: 23px;
-    -moz-border-radius: 23px;
-    border-radius: 23px;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
-
-.carousel-control.right {
-    right: 15px;
-    left: auto;
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    color: #ffffff;
-    text-decoration: none;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-}
-
-.carousel-indicators {
-    position: absolute;
-    margin: auto;
-    /* top: 15px; */
-    /* right: 0; */
-    left: 50%;
-    bottom: 15px;
-    z-index: 5;
-    list-style: none;
-    padding: 0;
-}
-
-/* .carousel-indicators ul {
-    margin-left: -50%; 
-} */
-.carousel-indicators li {
-    display: block;
-    float: left;
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
-    text-indent: -999px;
-    background-color: #ccc;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 5px;
-}
-
-.carousel-indicators .active {
-    background-color: #fff;
-}
-
-.carousel-caption {
-    position: absolute;
-    width: 100%;
-    margin: auto;
-    top: 50%;
-    text-align: center;
-    /* padding: 15px; */
-    /* background: #333333; */
-    /* background: rgba(0, 0, 0, 0.75); */
-}
-
-.carousel-caption h4,
-.carousel-caption p {
-     /* line-height: 20px;  */
-    color: #ffffff;
-      /* margin-top: -50%;   */
-}
-
-.carousel-caption h4 {
-    margin: 0 0 5px;
-}
-
-.carousel-caption p {
-    margin-bottom: 0;
+.flex-direction-nav li a.flex-next{
+    right:40px;
+    background:url(images/next.png) center center no-repeat;
 }

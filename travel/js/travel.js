@@ -1,46 +1,140 @@
 // for 目的地、城市、地址、酒店、地标、商圈选择
 $(function () {
-    var startDate = endDate = moment().format('YYYY-MM-DD');
-    var dateRange = new pickerDateRange('date_demo1', {
-        isTodayValid: true,
-        startDate: startDate,
-        endDate: endDate,
-        defaultText: ' 至 ',
-        stopToday: true,
-        autoSubmit: false,
-        fromToday: true,
-        monthRangeMax: 12,
-        inputTrigger: 'input_trigger_demo1',
-        success: function (obj) {
-            $("#dCon_demo1").html('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
-        }
-    });
-    $('#hotel').find('input').on('focus', function () {
-        var name = $(this).attr('name');
+    new travel();
+});
+function travel() {
+    this.init();
+    this.$thisInput = null;
+}
+travel.prototype = {
+    init: function () {
+        var self = this;
+        var myCalendar = new SimpleCalendar('#myCalendar');
+        var options = {
+            width: '500px',
+            height: '200px',
+            language: 'CH', //语言
+            showLunarCalendar: true, //阴历
+            showHoliday: true, //休假
+            showFestival: true, //节日
+            showLunarFestival: false, //农历节日
+            showSolarTerm: true, //节气
+            showMark: true, //标记
+            timeRange: {
+                startYear: 1900,
+                endYear: 2049
+            },
+            mark: {
+                '2016-5-5': '上学'
+            },
+            theme: {
+                changeAble: false,
+                weeks: {
+                    backgroundColor: '#FBEC9C',
+                    fontColor: '#4A4A4A',
+                    fontSize: '16px',
+                },
+                days: {
+                    backgroundColor: '#ffffff',
+                    fontColor: '#565555',
+                    fontSize: '14px'
+                },
+                todaycolor: 'orange',
+                activeSelectColor: 'orange',
+            }
+        };
+        $('#hotel').find('input').on('focus', function () {
+            self.showDialogBox(this);
+        });
+        $(document).on('click', function (event) {
+            self.hideDialogBox(event);
+        });
+        $('.city-js').find('p').on('click', function () {
+            self.chooseCity(this);
+        });
+        $('.sort-js').find('li').on('click', function () {
+            self.citySort(this);
+        });
+        $('.day').on('click', function () {
+            self.chooseDate(this);
+        });
+    },
+    showDialogBox: function (that) {
+        var self = this;
+        self.$thisInput = that;
+        var oName = $(that).attr('name');
         $('.hotels').removeClass('width-0');
         $('.oCheckbox').addClass('width-0');
         $('#hotel>ul').addClass('afterClick');
-        if (name === 'hotels') {
-            $('.wedget-city-list').css({
-                'display': 'block',
-                'margin-left': '323px'
-            });
-        } else { 
-            $('.wedget-city-list').css({
-                'display': 'block',
-                'margin-left': '0px'
-            });
+        switch (oName) {
+            case 'destination':
+                $('#myCalendar').hide();
+                $('.wedget-city-list').hide();
+                $('.wedget-city-list').css({
+                    'display': 'block',
+                    'margin-left': '0px'
+                });
+                break;
+            case 'hotels':
+                $('#myCalendar').hide();
+                $('.wedget-city-list').hide();
+                $('.wedget-city-list').css({
+                    'display': 'block',
+                    'margin-left': '323px'
+                });
+                break;
+            case 'live-in':
+                $('#myCalendar').hide();
+                $('.wedget-city-list').hide();
+                $('#myCalendar').css({
+                    'display': 'block'
+                });
+                break;
+            case 'leave-out':
+                $('#myCalendar').hide();
+                $('.wedget-city-list').hide();
+                $('#myCalendar').css({
+                    'display': 'block'
+                });
+                break;
         }
-            
-        // });
-        // $('#hotel').find('input[name="hotels"]').on('focus', function () {
-        //     $('.wedget-city-list').css({
-        //         'display': 'block',
-        //         'margin-left': '323px'
-        //     });
-        // });
-        $('.wedget-city-list').on('mouseout', function () {
+    },
+    hideDialogBox: function (event) {
+        var e = event.target || window.target;
+        var parent1 = $(e).parents('.wedget-city-list');
+        var parent2 = $(e).parents('#myCalendar');
+        var iName = $(e).attr('name');
+        console.log(e, iName, parent, parent.length);
+        if (iName == 'button') {
             $('.wedget-city-list').css('display', 'none');
-        })
-    })  
-})
+            $('#myCalendar').css('display', 'none');
+        } else if (iName == 'destination' || iName == 'hotels' || iName == 'live-in' || iName == 'leave-out' || parent1.length || parent2.length) {
+            return;
+        } else {
+            $('.wedget-city-list').css('display', 'none');
+            $('#myCalendar').css('display', 'none');
+            $('.hotels').addClass('width-0');
+            $('.oCheckbox').removeClass('width-0');
+            $('#hotel>ul').removeClass('afterClick');
+        }
+    },
+    chooseCity: function (that) {
+        var self = this;
+        $(that).addClass('active');
+        $('.city-js').find('p').removeClass('active');
+        var content = $(that).text();
+        $(self.$thisInput).val(content);
+    },
+    citySort: function (that) {
+        $('.sort-js').find('li').removeClass('active');
+        $(that).addClass('active');
+    },
+    chooseDate: function (that) {
+        var self = this;
+        var today = $(that).text();
+        var month = $('.sc-select-month').val();
+        var year = $('.sc-select-year').val();
+        var oDate = [year, month, today].join('-');
+        $(self.$thisInput).val(oDate);
+    }
+};

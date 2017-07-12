@@ -110,9 +110,9 @@
     padding: 0;
 }
 
-.carousel-indicators ul {
+/* .carousel-indicators ul {
     margin-left: -50%; 
-}
+} */
 .carousel-indicators li {
     display: block;
     float: left;

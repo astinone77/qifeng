@@ -218,7 +218,7 @@ fa {
 }
 
 .hotel-reservation>div:first-child p:first-child {
-    margin: 10px 0 15px;
+    /* margin: 10px 0 15px; */
     border-right: 1px solid #eee;
     color: #777;
 }
@@ -236,7 +236,12 @@ fa {
     color: #ccc;
 }
 
-.book-wedget form>ul li:not(:first-child) {
+.book-wedget form>ul li.destination {
+    /* width: 480px; */
+}
+
+.book-wedget form>ul li.oCheckbox,
+.book-wedget form>ul li.oButton {
     width: 165px;
 }
 
@@ -255,13 +260,18 @@ fa {
     font-size: 16px;
 }
 
-.book-wedget form>ul li input[name="destination"],
-.book-wedget form>ul li input[name="hotels"] {
+.book-wedget .destination input,
+.book-wedget .hotels .ta_date {
     width: 222px;
     padding: 8px 0;
     margin-right: 10px;
     color: #c9c9c9;
     text-indent: 20px;
+    border-radius: 0;
+}
+
+.book-wedget form>ul li.hotels {
+    margin-left: 0;
 }
 
 .book-wedget form>ul li button {
@@ -279,6 +289,32 @@ fa {
     opacity: 0;
 }
 
+.hotel-reservation .book-wedget .afterClick .destination input{
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+/*afterClick  */
+
+.hotel-reservation .book-wedget .afterClick .destination input,
+.hotel-reservation .book-wedget .afterClick li.hotels .ta_date {
+    width: 310px;
+}
+
+.hotel-reservation .book-wedget .afterClick .hotels input {
+    display: block;
+}
+
+.hotel-reservation .book-wedget .afterClick .oCheckbox {
+    display: none;
+}
+
+/* .hotel-reservation .book-wedget .afterClick li.hotels .ta_date {
+    text-align: center;
+} */
+
 .wedget-city-list {
     width: 436px;
     /* height: 136px; */
@@ -286,34 +322,43 @@ fa {
     background-color: #ffffff;
     padding: 15px;
     display: none;
-    /* margin-top: -23px; */
+     margin-top: 4px; 
 }
-.wedget-city-list h5{
-    margin: 0 ;
+
+.wedget-city-list h5 {
+    margin: 0;
 }
-.wedget-city-list ul:first-of-type{
+
+.wedget-city-list ul:first-of-type {
     margin: 10px 0 5px;
 }
+
 .wedget-city-list ul:not(:first-of-type) {
     display: none;
 }
-.wedget-city-list ul.active{
+
+.wedget-city-list ul.active {
     display: block;
 }
-.wedget-city-list ul li{
+
+.wedget-city-list ul li {
     font-size: 14px;
     width: 12.5%;
     text-align: center;
-    padding: 5px 0; 
+    padding: 5px 0;
     cursor: pointer;
 }
-.wedget-city-list ul li.active{
+
+.wedget-city-list ul li.active {
     background-color: #00a699;
     color: #ffffff;
 }
-.wedget-city-list ul li p{
-    padding: 5px 0;    
+
+.wedget-city-list ul li p {
+    padding: 5px 0;
 }
+
+
 /*for 精选、推荐*/
 
 .main-recommend {

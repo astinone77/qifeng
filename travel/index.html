@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./css/carousel.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/carousel.css"> -->
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./time/css/dateRange.css">
     <link rel="stylesheet" href="./css/travel.css">
     <title>旅游网站</title>
 </head>
@@ -70,13 +71,13 @@
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
-                <ul>
+                <!-- <ul> -->
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                     <li data-target="#myCarousel" data-slide-to="3"></li>
                     <li data-target="#myCarousel" data-slide-to="4"></li>
-                </ul>
+                <!-- </ul> -->
             </ol>
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
@@ -111,31 +112,35 @@
             </div>
             <div class="book-wedget">
                 <form id="hotel">
-                    <ul>
-                        <li>
+                    <ul class="">
+                        <li class="destination">
                             <input type="text" name="destination" value="" placeholder="目的地、城市、地址">
                             <input type="text" name="hotels" value="" placeholder="酒店、地标、商圈">
                         </li>
-                        <li class="width-0">
-                            <input type="text" name="live-in" value="" placeholder="目的地、城市、地址">
-                            <input type="text" name="leave-out" value="" placeholder="酒店、地标、商圈">
+                        <li class="hotels width-0">
+                            <!-- <input type="text" name="live-in" value="" placeholder="入住"> -->
+                            <!-- <input type="text" name="leave-out" value="" placeholder="离店"> -->
+                            <div class="ta_date" id="demo1">
+                                <span class="date_title" id="date_demo1"></span>
+                                <!-- <a class="opt_sel" id="input_trigger_demo1" href="#"><i class="i_orderd"></i></a> -->
+                            </div>
                         </li>
-                        <li>
+                        <li class="oCheckbox">
                             <input type="checkbox" id="tuanfang">
                             <label for="tuanfang">团房</label>
                             <p>5间以上享优惠</p>
                         </li>
-                        <li>
+                        <li class="oCheckbox">
                             <input type="checkbox" id="changzhu">
                             <label for="changzhu">团房</label>
                             <p>10间以上享优惠</p>
                         </li>
-                        <li>
+                        <li class="oCheckbox">
                             <input type="checkbox" id="meeting">
                             <label for="meeting">团房</label>
                             <p>10间以上享优惠</p>
                         </li>
-                        <li>
+                        <li class="oButton">
                             <button type="button">搜索</button>
                         </li>
                     </ul>
@@ -438,9 +443,12 @@
         </ul>
         <div><img src="./img/底部.png" alt=""></div>
     </footer>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <script src="./js/carousel.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="./js/carousel.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./time/js/moment.js"></script>
+    <script src="./time/js/dateRange.js"></script>
+    <script src="./js/travel.js"></script>
 </body>
 
 </html>

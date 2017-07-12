@@ -1,0 +1,61 @@
+h4,div,
+p
+{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 0.1rem;
+	background-color: #f9f9f9;
+}
+
+a {
+	text-decoration: none;
+}
+
+.articals {
+	width: 100%;
+	padding: 0 0.08rem;
+	box-sizing: border-box;
+}
+
+.artical-box {
+	width: 100%;
+	background-color: #fff;
+	margin-top: 0.07rem;
+}
+
+.artical-box> div img {
+	width: 100%;
+	height: auto;
+}
+.artical-box> div h4{
+	font-size: 0.07rem;
+}
+.artical-box> div h4 a {
+	color: #333;
+	line-height: 1.8em;
+	font-weight: 600;
+	border-left: 0.25em solid #6fac7f;
+	padding-left: 0.5em;
+}
+.artical-box> div p{
+	font-size: 0.05rem;	
+	padding: 0.05em 0.75em;
+}
+.artical-box> div p a {
+	color: #999;
+	display: inline-block;
+	line-height: 1.8em;
+	height: 3.6em;
+    width: 100%;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    text-overflow:ellipsis;
+    /*white-space: nowrap;*/
+}

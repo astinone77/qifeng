@@ -4,10 +4,10 @@
   text-align: center;
   font-family: "Microsoft Yahei";
   color: #4A4A4A;
-  /* box-shadow: 2px 4px 5px #bdbdbd; */
-  /* border-width: 1px 0 0 1px; */
-  /* border-color: #E6E4E0; */
-  /* border-style: solid; */
+  box-shadow: 2px 4px 5px #bdbdbd;
+  border-width: 1px 0 0 1px;
+  border-color: #E6E4E0;
+  border-style: solid;
   float: left;
   margin-right: 20px;
   -moz-user-select: none;
@@ -19,20 +19,16 @@
   user-select: none;
   -webkit-text-size-adjust: none;
   font-size: 16px;
-  position: absolute;
-  z-index: 999;
-  overflow: hidden;
 }
 
 .sc-header {
   height: 35px;
   border-bottom: 0;
-  background-color: #ffffff;
 }
 .sc-body {
-   height: 93%; 
+  height: 93%;
   clear: both;
-  /* box-shadow: 2px 4px 5px #bdbdbd; */
+  box-shadow: 2px 4px 5px #bdbdbd;
 }
 .sc-week {
   height: 12%;
@@ -41,21 +37,20 @@
   color: #4A4A4A;
 }
 .sc-days {
-   height: 88%; 
+  height: 88%;
 }
 .sc-item {
-  height: 10%;
+  height: 20%;
   float: left;
   font-weight: 600;
   color: #565555;
   width: 14.285%;
-  /* padding-top: 5px; */
+  padding-top: 10px;
   background-color: #ffffff;
   border-width: 0 0 1px 1px;
   border-color: #F1EBE4;
   border-style: solid;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .item-nolunar {
   padding-top: 20px;

@@ -290,9 +290,21 @@ fa {
     visibility: hidden;
     opacity: 0;
 }
+/*for 日历  */
 .book-wedget #myCalendar{
-     display: none; 
-    right: 0;
+    display: none; 
+    position: absolute;
+    right: 4px;
+}
+.item-nolunar{
+    padding-top: 8px;
+}
+.sc-week-item{
+    padding-top: 2px;
+}
+
+.sc-header{
+    background-color: #ffffff;
 }
 .hotel-reservation .book-wedget .destination input {
     -webkit-transition: .5s;

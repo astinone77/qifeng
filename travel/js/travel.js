@@ -10,39 +10,14 @@ travel.prototype = {
     init: function () {
         var self = this;
         var myCalendar = new SimpleCalendar('#myCalendar');
-        var options = {
-            width: '500px',
-            height: '200px',
-            language: 'CH', //语言
-            showLunarCalendar: true, //阴历
-            showHoliday: true, //休假
-            showFestival: true, //节日
-            showLunarFestival: false, //农历节日
-            showSolarTerm: true, //节气
-            showMark: true, //标记
-            timeRange: {
-                startYear: 1900,
-                endYear: 2049
-            },
-            mark: {
-                '2016-5-5': '上学'
-            },
-            theme: {
-                changeAble: false,
-                weeks: {
-                    backgroundColor: '#FBEC9C',
-                    fontColor: '#4A4A4A',
-                    fontSize: '16px',
-                },
-                days: {
-                    backgroundColor: '#ffffff',
-                    fontColor: '#565555',
-                    fontSize: '14px'
-                },
-                todaycolor: 'orange',
-                activeSelectColor: 'orange',
-            }
-        };
+        myCalendar.updateSize('500px', '200px');
+        myCalendar.showFestival(false);
+        myCalendar.showLunarCalendar(false);
+        myCalendar.showHoliday(false);
+        myCalendar.showSolarTerm(false);
+        myCalendar.showLunarFestival(false);
+        myCalendar.showMark(false);
+        
         $('#hotel').find('input').on('focus', function () {
             self.showDialogBox(this);
         });

@@ -32,7 +32,10 @@
         <div class="nav-main-box width-1190 clearFixed">
             <div class="fl-left">
                 <span class="web-logo color-00a699">LOGO</span>
-                <span class="choose-city">成都站<span class="distance-fa-l" name="oEvent" data-box="city-location"><img src="./img/xiashanjiao_03.png" data-box="city-location" name="oEvent" alt=""></span></span>
+                <span class="choose-city">
+                    <span id="city-name">成都</span>站
+                    <img class="distance-fa-l" src="./img/xiashanjiao_03.png" data-box="city-location" data-click-event="true" alt="down">
+                </span>
             </div>
             <ul class="nav-main clearSpacing">
                 <li class="active">
@@ -79,66 +82,60 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <img src="./img/banner.png" alt="First slide">
-                    <div class="carousel-caption">
-                        <p>林中小墅1</p>
-                    </div>
                 </div>
                 <div class="item">
                     <img src="./img/banner-2.png" alt="First slide">
-                    <div class="carousel-caption">林中小墅2</div>
                 </div>
                 <div class="item">
                     <img src="./img/banner.png" alt="First slide">
-                    <div class="carousel-caption">林中小墅3</div>
                 </div>
                 <div class="item">
                     <img src="./img/banner-2.png" alt="First slide">
-                    <div class="carousel-caption">林中小墅4</div>
                 </div>
                 <div class="item">
                     <img src="./img/banner.png" alt="First slide">
-                    <div class="carousel-caption">林中小墅5</div>
                 </div>
             </div>
         </div>
         <div class="hotel-reservation width-1190">
             <div>
-                <p class="hotel-reserve"  name="oEvent">酒店预定</p>
-                <p class="meeting active"  name="oEvent">会议.团房.长住</p>
+                <p class="reserve-js" data-after-click="afterClick" data-click-event="true">酒店预定</p>
+                <p class="reserve-js active"  data-click-event="true">会议.团房.长住</p>
             </div>
             <div class="book-wedget">
                 <form id="hotel">
                     <ul class="">
                         <li class="destination">
-                            <input type="text" name="destination"  data-box="city-destination" value="" placeholder="目的地、城市、地址">
-                            <input type="text" name="hotels"  data-box="city-hotel" value="" placeholder="酒店、地标、商圈">
+                            <input type="text" name="destination" data-box="city-destination" data-click-event="true" value="" placeholder="目的地、城市、地址">
+                            <input type="text" name="hotel" data-box="city-hotel" data-click-event="true" value="" placeholder="酒店、地标、商圈">
                         </li>
                         <li class="hotels width-0">
-                            <input type="text" name="live-in" value="" placeholder="入住">
-                            <input type="text" name="leave-out" value="" placeholder="离店">
+                            <input type="text" name="live-in" data-click-event="true" value="" placeholder="入住">
+                            <input type="text" name="leave-out" data-click-event="true" value="" placeholder="离店">
                         </li>
                         <li class="oCheckbox">
-                            <input type="checkbox" id="tuanfang">
+                            <input type="checkbox" name="tuanfang" id="tuanfang">
                             <label for="tuanfang">团房</label>
                             <p>5间以上享优惠</p>
                         </li>
                         <li class="oCheckbox">
-                            <input type="checkbox" id="changzhu">
-                            <label for="changzhu">团房</label>
+                            <input type="checkbox" name="long-live" id="long-live">
+                            <label for="long-live">长住房</label>
                             <p>10间以上享优惠</p>
                         </li>
                         <li class="oCheckbox">
-                            <input type="checkbox" id="meeting">
-                            <label for="meeting">团房</label>
+                            <input type="checkbox" name="meeting-place" id="meeting-place">
+                            <label for="meeting-place">会议场地</label>
                             <p>10间以上享优惠</p>
                         </li>
                         <li class="oButton">
-                            <button type="button" name="button">搜索</button>
+                            <button type="button" id="search-hotel">搜索</button>
                         </li>
                     </ul>
                     <!--日历  -->
-                    <div class="myCalendar" id="myCalendar"></div>
-                    <div class="wedget-city-list city-location">
+                    <div id="myCalendar" data-click-event="true"></div>
+                    <!--日历 end  -->
+                    <div class="widget-city-list city-location" data-click-event="true">
                         <h5>热门城市（可直接输入城市或城市拼音）</h5>
                         <ul class="clearSpacing sort-js">
                             <li class="active">热门</li>
@@ -193,7 +190,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="wedget-city-list city-destination">
+                    <div class="widget-city-list city-destination" data-click-event="true">
                         <h5>热门城市（可直接输入城市或城市拼音）</h5>
                         <ul class="clearSpacing sort-js">
                             <li class="active">热门</li>
@@ -248,7 +245,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="wedget-city-list city-hotel">
+                    <div class="widget-city-list city-hotel" data-click-event="true">
                         <h5>热门城市（可直接输入城市或城市拼音）</h5>
                         <ul class="clearSpacing sort-js">
                             <li class="active">热门</li>

@@ -11,410 +11,417 @@ h4,
 button,
 ul,
 li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body,
 section {
-    width: 100%;
+  width: 100%;
 }
 
 body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 a {
-    text-decoration: none;
-    color: #ddd;
+  text-decoration: none;
+  color: #ddd;
 }
 
 a:link,
 a:active,
 a:visited,
 a:hover {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .distance-fa-l {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .distance-fa-r {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .width-1190 {
-    width: 1190px;
-    margin: 0 auto;
+  width: 1190px;
+  margin: 0 auto;
 }
 
 .width-0 {
-    width: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    visibility: hidden;
-    opacity: 0;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .margin-top-negative {
-    margin-top: -3px;
+  margin-top: -3px;
 }
 
 .fl-left {
-    float: left;
+  float: left;
 }
 
 .fl-right {
-    float: right;
+  float: right;
 }
-
 
 /*清除浮动 　　　*/
 
 .clearFixed:after {
-    centent: "";
-    height: 0;
-    line-height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
-    overflow: hidden;
+  centent: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
 }
-
 
 /*为了兼容IE　*/
 
 .clearFixed {
-    zoom: 1;
+  zoom: 1;
 }
 
 .clearSpacing {
-    font-size: 0;
-    word-spacing: 0;
-    letter-spacing: 0;
+  font-size: 0;
+  word-spacing: 0;
+  letter-spacing: 0;
 }
 
 .color-00a699 {
-    color: #00a699;
+  color: #00a699;
 }
 
-
 /*for website public style end*/
-
 
 /*for header start*/
 
 .nav-top-box {
-    width: 100%;
-    background-color: #38414c;
+  width: 100%;
+  background-color: #38414c;
 }
 
 .nav-top {
-    font-size: 12px;
-    color: #eee;
-    height: 30px;
-    line-height: 30px;
-    padding: 0;
+  font-size: 12px;
+  color: #eee;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
 }
 
 .nav-top a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-.nav-top-left>span {
-    margin-right: 28px;
+.nav-top-left > span {
+  margin-right: 28px;
 }
 
-.nav-top-right>span {
-    margin-left: 28px;
+.nav-top-right > span {
+  margin-left: 28px;
 }
-
 
 /*for nav-main*/
 
 .choose-city {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nav-main-box div.fl-left {
-    padding: 23px 0;
+  padding: 23px 0;
 }
 
 .nav-main-box .nav-main {
-    padding: 29px 0;
+  padding: 29px 0;
 }
 
 .web-logo {
-    font-size: 24px;
-    vertical-align: middle;
-    margin-right: 15px;
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 15px;
 }
 
 .nav-main {
-    margin-left: 215px;
+  margin-left: 215px;
 }
 
-.nav-main>li {
-    display: inline-block;
-    width: 121px;
-    font-size: 16px;
-    text-align: center;
+.nav-main > li {
+  display: inline-block;
+  width: 121px;
+  font-size: 16px;
+  text-align: center;
 }
 
-.nav-main>li a {
-    color: #333;
-    font-weight: 600;
+.nav-main > li a {
+  color: #333;
+  font-weight: 600;
 }
 
-.nav-main>li a p {
-    /* width: 100%; */
-    /* height: 18px; */
-    box-sizing: border-box;
-    border-right: 1px solid #333333;
+.nav-main > li a p {
+  /* width: 100%; */
+  /* height: 18px; */
+  box-sizing: border-box;
+  border-right: 1px solid #333333;
 }
 
-.nav-main>li:nth-child(4) {
-    width: 191px;
+.nav-main > li:nth-child(4) {
+  width: 191px;
 }
 
 .nav-main .active a {
-    color: #00a699;
+  color: #00a699;
 }
 
-
 /*for header end*/
-
 
 /*a line after header  */
 
 .line-100 {
-    width: 100%;
-    height: 0;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px 1px #e5e5e5;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 1px #e5e5e5;
 }
 
 .location-now {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 0;
-    letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+  letter-spacing: 1px;
 }
-
 
 /*a line after header end */
 
 .book-wedget {
-    position: relative;
+  position: relative;
 }
 
-.book-wedget form>ul {
-    margin: 0;
-    padding: 0;
-    max-height: 35px;
+.book-wedget form > ul {
+  margin: 0;
+  padding: 0;
+  max-height: 47px;
 }
 
-.book-wedget form>ul li,
-.wedget-city-list ul li {
-    display: inline-block;
-    vertical-align: top;
-    color: #ccc;
+.book-wedget form > ul li,
+.widget-city-list ul li {
+  display: inline-block;
+  vertical-align: top;
+  color: #ccc;
 }
 
-.book-wedget form>ul li.oCheckbox {
-    width: 165px;
+.book-wedget form > ul li.oCheckbox {
+  width: 165px;
 }
 
-.book-wedget form>ul li:not(:first-child):not(:last-child) {
-    /* width: 151px; */
-    box-sizing: border-box;
-    /* padding: 0 15px; */
+.book-wedget form > ul li:not(:first-child):not(:last-child) {
+  /* width: 151px; */
+  box-sizing: border-box;
+  /* padding: 0 15px; */
 }
 
-.book-wedget form>ul li p {
-    font-size: 14px;
-    text-indent: 15px;
+.book-wedget form > ul li p {
+  font-size: 14px;
+  text-indent: 15px;
 }
 
-.book-wedget form>ul li input[type="checkbox"] {
-    font-size: 16px;
+.book-wedget form > ul li input[type="checkbox"] {
+  font-size: 16px;
 }
 
 .book-wedget .destination input,
 .book-wedget .hotels input {
-    width: 222px;
-    padding: 8px 0;
-    margin-right: 8px;
-    color: #c9c9c9;
-    text-indent: 20px;
-    border-radius: 0;
+  width: 222px;
+  padding: 8px 0;
+  margin-right: 8px;
+  color: #c9c9c9;
+  text-indent: 20px;
+  border-radius: 0;
 }
 
 .book-wedget .destination input[name="hotels"] {
-    width: 252px;
+  width: 252px;
 }
 
-.book-wedget form>ul li.hotels {
-    margin-left: 0;
+.book-wedget form > ul li.hotels {
+  margin-left: 0;
 }
 
-.book-wedget form>ul li.oButton {
-    width: 171px;
-    position: absolute;
-    /* top: 43px; */
-    top: 0;
-    right: 10px;
+.book-wedget form > ul li.oButton {
+  width: 171px;
+  position: absolute;
+  /* top: 43px; */
+  top: 0;
+  right: 10px;
 }
 
-.book-wedget form>ul li button {
-    width: 100%;
-    border: none;
-    padding: 10px 0;
-    background-color: #00a699;
+.book-wedget form > ul li button {
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  background-color: #00a699;
 }
-
 
 /*for 日历  */
 
-.book-wedget #myCalendar {
-    display: none;
-    position: absolute;
-    right: 4px;
+.sc-calendar {
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+.sc-calendar.live-in{
+  display: block;
+  right: 11px;
+}
+.sc-calendar.leave-out{
+  display: block;  
+  right: -169px;
 }
 
 .item-nolunar {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .sc-week-item {
-    padding-top: 2px;
+  padding-top: 2px;
 }
 
 .sc-header {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .hotel-reservation .book-wedget .destination input {
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
-.wedget-city-list {
-    position: absolute;
-    width: 436px;
-    /* height: 136px; */
-    border: 2px solid #eee;
-    background-color: #ffffff;
-    padding: 15px;
-    display: none;
-    margin-top: 4px;
+.widget-city-list {
+  position: absolute;    
+  z-index: 999;
+   display: none; 
+  width: 436px;
+  border: 2px solid #eee;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-top: 4px;
+  transition: .5s;
 }
 
-.wedget-city-list.active{
-    display: block;
-    position: absolute;
-    left: 70px;
-    top:-105px;
+.widget-city-list.active{
+  display: block;
+}
+.widget-city-list.city-location {
+  top: -105px;
+  left: 75px;
+}
+.widget-city-list.city-destination {
+  top: 35px;
+  left: 0;
+}
+.widget-city-list.city-hotel {
+  top: 35px;
+  left: 233px;
 }
 
-.wedget-city-list h5 {
-    margin: 0;
+.widget-city-list h5 {
+  margin: 0;
 }
 
-.wedget-city-list ul:first-of-type {
-    margin: 10px 0 5px;
+.widget-city-list ul:first-of-type {
+  margin: 10px 0 5px;
 }
 
-.wedget-city-list ul:not(:first-of-type) {
-    display: none;
+.widget-city-list ul:not(:first-of-type) {
+  display: none;
 }
 
-.wedget-city-list ul.active {
-    display: block;
+.widget-city-list ul.active {
+  display: block;
 }
 
-.wedget-city-list ul li {
-    font-size: 14px;
-    width: 12.5%;
-    text-align: center;
-    padding: 5px 0;
-    cursor: pointer;
+.widget-city-list ul li {
+  font-size: 14px;
+  width: 12.5%;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
 }
 
-.wedget-city-list ul li.active {
-    background-color: #00a699;
-    color: #ffffff;
+.widget-city-list ul li.active {
+  background-color: #00a699;
+  color: #ffffff;
 }
 
-.wedget-city-list ul li p {
-    padding: 5px 0;
+.widget-city-list ul li p {
+  padding: 5px 0;
 }
 
-.wedget-city-list ul li p.active {
-    background-color: #eee;
+.widget-city-list ul li p.active {
+  background-color: #eee;
 }
-
 
 /* for afterClick  */
 
-.hotel-reservation .book-wedget form>ul.afterClick .destination input {
-    width: 310px;
+.hotel-reservation .book-wedget form > ul.afterClick .destination input {
+  width: 310px;
 }
 
-.hotel-reservation .book-wedget form>ul.afterClick li.hotels input {
-    width: 150px;
-    display: inline-block;
+.hotel-reservation .book-wedget form > ul.afterClick li.hotels input {
+  width: 150px;
+  display: inline-block;
 }
 
-.hotel-reservation .book-wedget form>ul.afterClick .hotels input {
-    display: block;
+.hotel-reservation .book-wedget form > ul.afterClick .hotels input {
+  display: block;
 }
 
-.hotel-reservation .book-wedget form>ul.afterClick .oCheckbox {
-    display: none;
+.hotel-reservation .book-wedget form > ul.afterClick .oCheckbox {
+  display: none;
 }
-
 
 /*for footer*/
 
 footer {
-    padding: 20px 20px 70px;
-    text-align: center;
+  padding: 20px 20px 70px;
+  text-align: center;
 }
 
 footer a {
-    color: #333 !important;
+  color: #333 !important;
 }
 
 footer ul {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer ul li {
-    display: inline-block;
-    font-size: 14px;
-    color: #777;
+  display: inline-block;
+  font-size: 14px;
+  color: #777;
 }
 
 footer ul li:not(:last-child) {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 footer ul:first-child li {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 footer ul:first-child li:not(:last-child) {
-    border-right: 1px solid #777;
+  border-right: 1px solid #777;
 }

@@ -8,12 +8,7 @@
 .carousel, .carousel-inner {
     width: 100%;
 }
-.carousel .carousel-caption {
-    font-size: 72px;
-    text-align: center;
-    color: #ffffff;
-    bottom: 30%;
-}
+
 
 /*hotel-reservation  */
 
@@ -252,4 +247,11 @@ h4 {
 .partner .carousel-indicators .active {
     background-color: #00a699;
     border: none;
+}
+
+.book-wedget form > ul li.oButton {
+  right: 0;
+}
+.book-wedget .hotels input {
+  width: 168px !important;
 }

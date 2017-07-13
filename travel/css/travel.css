@@ -3,12 +3,13 @@
 .carousel {
     position: relative;
 }
-#myCarousel .carousel, .carousel-inner {
-    width: 100%;
+#myCarousel .carousel-inner {
+    width: 1920px;
+    margin: 0 auto;
     text-align: center;
 }
 #myCarousel .carousel-inner div{
-    width: 1920px;
+    width: 100%;
     height: 580px;
     margin: 0 auto;
 }

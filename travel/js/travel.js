@@ -1,13 +1,14 @@
 // for 目的地、城市、地址、酒店、地标、商圈选择
-$(function () {
+$(function() {
     new travel();
 });
+
 function travel() {
     this.init();
-    this.$thisInput = null;
+    this.thisInput = null;
 }
 travel.prototype = {
-    init: function () {
+    init: function() {
         var self = this;
         var myCalendar = new SimpleCalendar('#myCalendar');
         myCalendar.updateSize('500px', '200px');
@@ -17,26 +18,26 @@ travel.prototype = {
         myCalendar.showSolarTerm(false);
         myCalendar.showLunarFestival(false);
         myCalendar.showMark(false);
-        
-        $('#hotel').find('input').on('focus', function () {
+
+        $('#hotel').find('input').on('focus', function() {
             self.showDialogBox(this);
         });
-        $(document).on('click', function (event) {
+        $(document).on('click', function(event) {
             self.hideDialogBox(event);
         });
-        $('.city-js').find('p').on('click', function () {
+        $('.city-js').find('p').on('click', function() {
             self.chooseCity(this);
         });
-        $('.sort-js').find('li').on('click', function () {
+        $('.sort-js').find('li').on('click', function() {
             self.citySort(this);
         });
-        $('.day').on('click', function () {
+        $('.day').on('click', function() {
             self.chooseDate(this);
         });
     },
-    showDialogBox: function (that) {
+    showDialogBox: function(that) {
         var self = this;
-        self.$thisInput = that;
+        self.thisInput = that;
         var oName = $(that).attr('name');
         $('.hotels').removeClass('width-0');
         $('.oCheckbox').addClass('width-0');
@@ -74,7 +75,7 @@ travel.prototype = {
                 break;
         }
     },
-    hideDialogBox: function (event) {
+    hideDialogBox: function(event) {
         var e = event.target || window.target;
         var parent1 = $(e).parents('.wedget-city-list');
         var parent2 = $(e).parents('#myCalendar');
@@ -93,23 +94,23 @@ travel.prototype = {
             $('#hotel>ul').removeClass('afterClick');
         }
     },
-    chooseCity: function (that) {
+    chooseCity: function(that) {
         var self = this;
         $(that).addClass('active');
         $('.city-js').find('p').removeClass('active');
         var content = $(that).text();
-        $(self.$thisInput).val(content);
+        $(self.thisInput).val(content);
     },
-    citySort: function (that) {
+    citySort: function(that) {
         $('.sort-js').find('li').removeClass('active');
         $(that).addClass('active');
     },
-    chooseDate: function (that) {
+    chooseDate: function(that) {
         var self = this;
         var today = $(that).text();
         var month = $('.sc-select-month').val();
         var year = $('.sc-select-year').val();
         var oDate = [year, month, today].join('-');
-        $(self.$thisInput).val(oDate);
+        $(self.thisInput).val(oDate);
     }
 };

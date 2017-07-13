@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./css/carousel.css"> -->
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/simple-calendar.css">
+    <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/travel.css">
     <title>旅游网站</title>
 </head>
@@ -21,13 +20,11 @@
                     <span><a href="#">免费注册</a></span>
                 </div>
                 <div class="nav-top-right fl-right">
-                    <span><a href="#"><span class="distance-fa-r"><i class="fa fa-bars color-00a699" aria-hidden="true"></i></span>我的订单</a>
+                    <span><a href="#"><span class="distance-fa-r"><img src="./img/我的订单.png" alt="dingdan"></span>我的订单</a>
                     </span>
-                    <span><a href="#"><span class="distance-fa-r"><i class="fa fa-heart color-00a699"
-                                                         aria-hidden="true"></i></span>我的收藏</a>
+                    <span><a href="#"><span class="distance-fa-r"><img src="./img/我的收藏.png" alt="like"></span>我的收藏</a>
                     </span>
-                    <span><a class="color-00a699" href="#"><span class="distance-fa-r"><i class="fa fa-headphones"
-                                                                              aria-hidden="true"></i></span>联系客服</a>
+                    <span><a class="color-00a699" href="#"><span class="distance-fa-r"><img src="./img/联系客服.png" alt="connect"></span>联系客服</a>
                     </span>
                 </div>
             </div>
@@ -35,8 +32,7 @@
         <div class="nav-main-box width-1190 clearFixed">
             <div class="fl-left">
                 <span class="web-logo color-00a699">LOGO</span>
-                <span class="choose-city">成都站<span class="distance-fa-l"><i class="fa fa-caret-down"
-                                                                  aria-hidden="true"></i></span></span>
+                <span class="choose-city">成都站<span class="distance-fa-l" name="oEvent" data-box="city-location"><img src="./img/xiashanjiao_03.png" data-box="city-location" name="oEvent" alt=""></span></span>
             </div>
             <ul class="nav-main clearSpacing">
                 <li class="active">
@@ -72,11 +68,11 @@
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
                 <!-- <ul> -->
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
                 <!-- </ul> -->
             </ol>
             <!-- 轮播（Carousel）项目 -->
@@ -107,19 +103,19 @@
         </div>
         <div class="hotel-reservation width-1190">
             <div>
-                <p>酒店预定</p>
-                <p>会议.团房.长住</p>
+                <p class="hotel-reserve"  name="oEvent">酒店预定</p>
+                <p class="meeting active"  name="oEvent">会议.团房.长住</p>
             </div>
             <div class="book-wedget">
                 <form id="hotel">
                     <ul class="">
                         <li class="destination">
-                            <input type="text" name="destination" value="" placeholder="目的地、城市、地址">
-                            <input type="text" name="hotels" value="" placeholder="酒店、地标、商圈">
+                            <input type="text" name="destination"  data-box="city-destination" value="" placeholder="目的地、城市、地址">
+                            <input type="text" name="hotels"  data-box="city-hotel" value="" placeholder="酒店、地标、商圈">
                         </li>
                         <li class="hotels width-0">
-                             <input type="text" name="live-in" value="" placeholder="入住"> 
-                             <input type="text" name="leave-out" value="" placeholder="离店"> 
+                            <input type="text" name="live-in" value="" placeholder="入住">
+                            <input type="text" name="leave-out" value="" placeholder="离店">
                         </li>
                         <li class="oCheckbox">
                             <input type="checkbox" id="tuanfang">
@@ -142,7 +138,7 @@
                     </ul>
                     <!--日历  -->
                     <div class="myCalendar" id="myCalendar"></div>
-                    <div class="wedget-city-list">
+                    <div class="wedget-city-list city-location">
                         <h5>热门城市（可直接输入城市或城市拼音）</h5>
                         <ul class="clearSpacing sort-js">
                             <li class="active">热门</li>
@@ -196,6 +192,119 @@
                                 <p>无锡</p>
                             </li>
                         </ul>
+                    </div>
+                    <div class="wedget-city-list city-destination">
+                        <h5>热门城市（可直接输入城市或城市拼音）</h5>
+                        <ul class="clearSpacing sort-js">
+                            <li class="active">热门</li>
+                            <li>ABC</li>
+                            <li>DEFG</li>
+                            <li>HIK</li>
+                            <li>LMN</li>
+                            <li>PQRS</li>
+                            <li>TWX</li>
+                            <li>YZ</li>
+                        </ul>
+                        <ul class="clearSpacing active city-js" name="热门">
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wedget-city-list city-hotel">
+                        <h5>热门城市（可直接输入城市或城市拼音）</h5>
+                        <ul class="clearSpacing sort-js">
+                            <li class="active">热门</li>
+                            <li>ABC</li>
+                            <li>DEFG</li>
+                            <li>HIK</li>
+                            <li>LMN</li>
+                            <li>PQRS</li>
+                            <li>TWX</li>
+                            <li>YZ</li>
+                        </ul>
+                        <ul class="clearSpacing active city-js" name="热门">
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                            <li>
+                                <p>北京</p>
+                                <p>香港</p>
+                                <p>无锡</p>
+                            </li>
+                        </ul>
+                    
+                    
+                    
                     </div>
                 </form>
             </div>
@@ -442,8 +551,7 @@
         <div><img src="./img/底部.png" alt=""></div>
     </footer>
     <script src="./js/jquery-3.2.1.min.js"></script>
-    <!-- <script src="./js/carousel.js"></script> -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/simple-calendar.js"></script>
     <script src="./js/travel.js"></script>
 </body>

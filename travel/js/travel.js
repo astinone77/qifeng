@@ -1,5 +1,5 @@
 // for 目的地、城市、地址、酒店、地标、商圈选择
-$(function() {
+$(function () {
     new travel();
 });
 
@@ -8,7 +8,7 @@ function travel() {
     this.thisInput = null;
 }
 travel.prototype = {
-    init: function() {
+    init: function () {
         var self = this;
         var myCalendar = new SimpleCalendar('#myCalendar');
         myCalendar.updateSize('500px', '200px');
@@ -19,30 +19,56 @@ travel.prototype = {
         myCalendar.showLunarFestival(false);
         myCalendar.showMark(false);
 
-        $('#hotel').find('input').on('focus', function() {
-            self.showDialogBox(this);
+        $('.hotel-reserve').click(function () {
+            
+            $('.meeting').removeClass('active');            
+            $(this).addClass('active');
+            $('.hotels').removeClass('width-0');
+            $('.oCheckbox').addClass('width-0');
+            $('#hotel>ul').addClass('afterClick');
         });
-        $(document).on('click', function(event) {
-            self.hideDialogBox(event);
+        $('.meeting').click(function () {
+            var elem = $(this).data('box');
+            console.log(elem);
+            self.showDialogBox(elem);
+            $('.hotel-reserve').removeClass('active');
+            $(this).addClass('active');            
+            $('.hotels').addClass('width-0');
+            $('.oCheckbox').removeClass('width-0');
+            $('#hotel>ul').removeClass('afterClick');
         });
-        $('.city-js').find('p').on('click', function() {
+        $('#hotel').find('input').on('focus', function () {
+            var elem = $(this).data('box');
+            console.log(elem);
+            self.showDialogBox(elem);
+
+            // self.showDialogBox(this);
+        });
+        $('.city-js').find('p').on('click', function () {
             self.chooseCity(this);
         });
-        $('.sort-js').find('li').on('click', function() {
+        $('.sort-js').find('li').on('click', function () {
             self.citySort(this);
         });
-        $('.day').on('click', function() {
+        $('.day').on('click', function () {
             self.chooseDate(this);
         });
+        $('.choose-city img').on('click', function () {
+            var elem = $(this).data('box');
+            console.log(elem);
+            self.showDialogBox(elem);
+        });
+        $(document).on('click', function (event) {
+            self.hideDialogBox(event);
+        });
     },
-    showDialogBox: function(that) {
+    showDialogBox: function (elem,that) {
         var self = this;
         self.thisInput = that;
         var oName = $(that).attr('name');
-        $('.hotels').removeClass('width-0');
-        $('.oCheckbox').addClass('width-0');
-        $('#hotel>ul').addClass('afterClick');
-        switch (oName) {
+        $('.' + elem).addClass('active');
+        
+        switch (elem) {
             case 'destination':
                 $('#myCalendar').hide();
                 $('.wedget-city-list').hide();
@@ -75,42 +101,46 @@ travel.prototype = {
                 break;
         }
     },
-    hideDialogBox: function(event) {
+    hideDialogBox: function (event) {
+        var self = this;
         var e = event.target || window.target;
         var parent1 = $(e).parents('.wedget-city-list');
         var parent2 = $(e).parents('#myCalendar');
         var iName = $(e).attr('name');
-        console.log(e, iName, parent, parent.length);
+        // console.log(e, iName, parent, parent.length);
         if (iName == 'button') {
             $('.wedget-city-list').css('display', 'none');
             $('#myCalendar').css('display', 'none');
-        } else if (iName == 'destination' || iName == 'hotels' || iName == 'live-in' || iName == 'leave-out' || parent1.length || parent2.length) {
+        } else if (iName == 'oEvent' || iName == 'destination' || iName == 'hotels' || iName == 'live-in' || iName == 'leave-out' || parent1.length || parent2.length) {
             return;
         } else {
-            $('.wedget-city-list').css('display', 'none');
+            $('.wedget-city-list').removeClass('active').css('display', 'none');
             $('#myCalendar').css('display', 'none');
-            $('.hotels').addClass('width-0');
-            $('.oCheckbox').removeClass('width-0');
-            $('#hotel>ul').removeClass('afterClick');
         }
     },
-    chooseCity: function(that) {
+    chooseCity: function (that) {
         var self = this;
         $(that).addClass('active');
         $('.city-js').find('p').removeClass('active');
         var content = $(that).text();
         $(self.thisInput).val(content);
     },
-    citySort: function(that) {
+    citySort: function (that) {
         $('.sort-js').find('li').removeClass('active');
         $(that).addClass('active');
     },
-    chooseDate: function(that) {
+    chooseDate: function (that) {
         var self = this;
         var today = $(that).text();
         var month = $('.sc-select-month').val();
         var year = $('.sc-select-year').val();
         var oDate = [year, month, today].join('-');
         $(self.thisInput).val(oDate);
+    },
+    changeCity: function (elem) {
+        $('.'+elem).css({
+            'display': 'block',
+            'margin-left': '0px'
+        }).addClass('active');
     }
 };

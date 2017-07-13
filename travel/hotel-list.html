@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/hotel-list.css">
+    <title>酒店列表</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-top-box">
+            <div class="nav-top width-1190 clearFixed">
+                <div class="nav-top-left fl-left">
+                    <span>欢迎来到旅游网站</span>
+                    <span><a href="#">请登录</a></span>
+                    <span><a href="#">免费注册</a></span>
+                </div>
+                <div class="nav-top-right fl-right">
+                    <span><a href="#"><span class="distance-fa-r"><img src="./img/我的订单.png" alt="dingdan"></span>我的订单</a>
+                    </span>
+                    <span><a href="#"><span class="distance-fa-r"><img src="./img/我的收藏.png" alt="like"></span>我的收藏</a>
+                    </span>
+                    <span><a class="color-00a699" href="#"><span class="distance-fa-r"><img src="./img/联系客服.png" alt="connect"></span>联系客服</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-main-box width-1190 clearFixed">
+            <div class="fl-left">
+                <span class="web-logo color-00a699">LOGO</span>
+                <span class="choose-city">成都站<span class="distance-fa-l"><img src="./img/xiashanjiao_03.png" alt=""></span></span>
+            </div>
+            <ul class="nav-main clearSpacing">
+                <li class="active">
+                    <a href="#">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>关于我们</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>酒店</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>会议.团房.长住</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>个人中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="line-100"></div>
+    <div class="location-now width-1190">酒店 &gt; 北京酒店 &gt; 北京丽景湾国际酒店</div>
+    <section class="search-hotel width-1190">
+        <div class="book-wedget">
+            <form id="hotel">
+                <ul class="afterClick">
+                    <li class="destination">
+                        <input type="text" name="destination" value="" placeholder="目的地、城市、地址">
+                        <input type="text" name="hotels" value="" placeholder="酒店、地标、商圈">
+                    </li>
+                    <li class="hotels">
+                        <input type="text" name="live-in" value="" placeholder="入住">
+                        <input type="text" name="leave-out" value="" placeholder="离店">
+                    </li>
+                    <li class="oButton">
+                        <button type="button" name="button">搜索</button>
+                    </li>
+                </ul>
+                <!--日历  -->
+                <div class="myCalendar" id="myCalendar"></div>
+                <div class="wedget-city-list">
+                    <h5>热门城市（可直接输入城市或城市拼音）</h5>
+                    <ul class="clearSpacing sort-js">
+                        <li class="active">热门</li>
+                        <li>ABC</li>
+                        <li>DEFG</li>
+                        <li>HIK</li>
+                        <li>LMN</li>
+                        <li>PQRS</li>
+                        <li>TWX</li>
+                        <li>YZ</li>
+                    </ul>
+                    <ul class="clearSpacing active city-js" name="热门">
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                        <li>
+                            <p>北京</p>
+                            <p>香港</p>
+                            <p>无锡</p>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div>
+            <ul class="filter-hotel">
+                <li class="wd-big tx-left">酒店位置<button class="iBtn-yellow">不限</button></li>
+                <li class="wd-sam tx-left">地标<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">火车站<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">地铁<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">长途汽车站<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">飞机场<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">景区景点<img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left">商圈<img src="./img/xiashanjiao_07.png" alt=""></li>
+            </ul>
+            <ul class="filter-hotel">
+                <li class="wd-big tx-left">价&nbsp;&nbsp;格<button class="iBtn-yellow">不限</button></li>
+                <li class="wd-sam tx-left"><input id="price-150" type="checkbox"><label for="price-150">￥150以下</label><img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left"><input id="price-300" type="checkbox"><label for="price-300">￥150 - 300</label><img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left"><input id="price-301" type="checkbox"><label for="price-301">￥301 - 450</label><img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left"><input id="price-450" type="checkbox"><label for="price-450">￥450 - 600</label><img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="wd-sam tx-left"><input id="price-600" type="checkbox"><label for="price-600">￥600以上</label><img src="./img/xiashanjiao_07.png" alt=""></li>
+                <li class="tx-left"><label>自定义</label><input type="text">&macr;<input type="text"><button class="iBtn-sure">确定</button></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

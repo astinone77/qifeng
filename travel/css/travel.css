@@ -1,181 +1,3 @@
-/*public style*/
-
-html,
-body,
-header,
-section,
-footer,
-div,
-p,
-h4,
-button,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body,
-section {
-    width: 100%;
-}
-
-body {
-    background-color: #ffffff;
-}
-
-a {
-    text-decoration: none;
-    color: #ddd;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-fa {
-    padding: 0 2px;
-}
-
-.distance-fa-l {
-    margin-left: 5px;
-}
-
-.distance-fa-r {
-    margin-right: 5px;
-}
-
-.width-1190 {
-    width: 1190px;
-    margin: 0 auto;
-}
-
-.margin-top-negative {
-    margin-top: -3px;
-}
-
-.fl-left {
-    float: left;
-}
-
-.fl-right {
-    float: right;
-}
-
-
-/*清除浮动 　　　*/
-
-.clearFixed:after {
-    centent: "";
-    height: 0;
-    line-height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
-    overflow:hidden;
-}
-
-
-/*为了兼容IE　*/
-
-.clearFixed {
-    zoom: 1;
-}
-
-.clearSpacing {
-    font-size: 0;
-    word-spacing: 0;
-    letter-spacing: 0;
-}
-
-.color-00a699 {
-    color: #00a699;
-}
-
-/*for nav、nav-top*/
-
-.nav-top-box {
-    width: 100%;
-    background-color: #38414c;
-}
-
-.nav-top {
-    font-size: 12px;
-    color: #eee;
-    height: 30px;
-    line-height: 30px;
-    padding: 0;
-}
-.nav-top a:hover{
-    color: #ffffff;
-}
-.nav-top-left>span {
-    margin-right: 28px;
-}
-
-.nav-top-right>span {
-    margin-left: 28px;
-}
-
-
-/*for nav-main*/
-
-.choose-city {
-    cursor: pointer;
-}
-
-.nav-main-box div.fl-left {
-    padding: 23px 0;
-}
-
-.nav-main-box .nav-main {
-    padding: 29px 0;
-}
-
-.web-logo {
-    font-size: 24px;
-    vertical-align: middle;
-    margin-right: 15px;
-}
-
-.nav-main {
-    margin-left: 215px;
-}
-
-.nav-main>li {
-    display: inline-block;
-    width: 121px;
-    font-size: 16px;
-    text-align: center;
-}
-
-.nav-main>li a {
-    color: #333;
-    font-weight: 600;
-}
-
-.nav-main>li a p {
-    /* width: 100%; */
-    /* height: 18px; */
-    box-sizing: border-box;
-    border-right: 1px solid #333333;
-}
-
-.nav-main>li:nth-child(4) {
-    width: 191px;
-}
-
-.nav-main .active a {
-    color: #00a699;
-}
-
-
 /*轮播图*/
 
 .carousel {
@@ -183,19 +5,15 @@ fa {
     margin: 0 auto;
     position: relative;
 }
-
-.carousel,
-.carousel-inner {
+.carousel, .carousel-inner {
     width: 100%;
 }
-
 .carousel .carousel-caption {
     font-size: 72px;
     text-align: center;
     color: #ffffff;
-     bottom: 30%; 
+    bottom: 30%;
 }
-
 
 /*hotel-reservation  */
 
@@ -209,212 +27,51 @@ fa {
     right: 0;
     padding: 8px;
 }
-
+.hotel-reservation>div p{
+    cursor: pointer;
+    color: #777;
+}
+.hotel-reservation>div p.active{
+    color: #ffffff;
+}
 .hotel-reservation>div:first-child p {
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
     padding: 0 25px;
     margin: 5px 0;
 }
-
 .hotel-reservation>div:first-child p:first-child {
-    /* margin: 10px 0 15px; */
     border-right: 1px solid #eee;
-    color: #777;
-}
-
-.book-wedget form>ul {
-    margin: 0;
-    padding: 0;
-    max-height: 35px;
-}
-
-.book-wedget form>ul li,
-.wedget-city-list ul li {
-    display: inline-block;
-    vertical-align: top;
-    color: #ccc;
-}
-
-.book-wedget form>ul li.oCheckbox {
-    width: 165px;
-}
-
-.book-wedget form>ul li:not(:first-child):not(:last-child) {
-    /* width: 151px; */
-    box-sizing: border-box;
-    padding: 0 15px;
-}
-
-.book-wedget form>ul li p {
-    font-size: 14px;
-    text-indent: 15px;
-}
-
-.book-wedget form>ul li input[type="checkbox"] {
-    font-size: 16px;
-}
-
-.book-wedget .destination input,
-.book-wedget .hotels input {
-    width: 222px;
-    padding: 8px 0;
-    margin-right: 8px;
-    color: #c9c9c9;
-    text-indent: 20px;
-    border-radius: 0;
-}
-
-.book-wedget form>ul li.hotels {
-    margin-left: 0;
-}
-.book-wedget form>ul li.oButton {
-    width: 171px;
-    position: absolute;
-    top: 43px;
-    right: 8px;
-}
-.book-wedget form>ul li button {
-    width: 100%;
-    border: none;
-    padding: 10px 0;
-    background-color: #00a699;
-}
-
-.book-wedget .width-0 {
-    width: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    visibility: hidden;
-    opacity: 0;
-}
-/*for 日历  */
-.book-wedget #myCalendar{
-    display: none; 
-    position: absolute;
-    right: 4px;
-}
-.item-nolunar{
-    padding-top: 8px;
-}
-.sc-week-item{
-    padding-top: 2px;
-}
-
-.sc-header{
-    background-color: #ffffff;
-}
-.hotel-reservation .book-wedget .destination input {
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
 }
 
 
-/*afterClick  */
 
-.hotel-reservation .book-wedget form>ul.afterClick .destination input {
-    width: 310px;
-}
-.hotel-reservation .book-wedget form>ul.afterClick li.hotels input {
-    width: 150px;
-    display: inline-block;
-}
-
-.hotel-reservation .book-wedget form>ul.afterClick .hotels input {
-    display: block;
-}
-
-.hotel-reservation .book-wedget form>ul.afterClick .oCheckbox {
-    display: none;
-}
-
-
-/* .hotel-reservation .book-wedget .afterClick li.hotels .ta_date {
-    text-align: center;
-} */
-
-.wedget-city-list {
-    width: 436px;
-    /* height: 136px; */
-    border: 2px solid #eee;
-    background-color: #ffffff;
-    padding: 15px;
-    display: none;
-    margin-top: 4px;
-}
-
-.wedget-city-list h5 {
-    margin: 0;
-}
-
-.wedget-city-list ul:first-of-type {
-    margin: 10px 0 5px;
-}
-
-.wedget-city-list ul:not(:first-of-type) {
-    display: none;
-}
-
-.wedget-city-list ul.active {
-    display: block;
-}
-
-.wedget-city-list ul li {
-    font-size: 14px;
-    width: 12.5%;
-    text-align: center;
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-.wedget-city-list ul li.active {
-    background-color: #00a699;
-    color: #ffffff;
-}
-
-.wedget-city-list ul li p {
-    padding: 5px 0;
-}
-.wedget-city-list ul li p.active{
-    background-color: #eee;
-}
 
 /*for 精选、推荐*/
 
 .main-recommend {
     margin-top: 20px;
 }
-
-.recommend-left,
-.recommend-right {
+.recommend-left, .recommend-right {
     display: inline-block;
     height: 604px;
     vertical-align: top;
 }
-
 .recommend-left {
     position: relative;
     width: 498px;
 }
-
 .best-choice-box {
     position: relative;
 }
-
 .recommend-left .best-choice-box {
     height: 368px;
 }
-
 .recommend-left img[alt="best-choice"] {
     width: 100%;
     height: 100%;
 }
-
 .best-choice {
     font-size: 18px;
     color: #ffffff;
@@ -424,63 +81,52 @@ fa {
     left: 23px;
     background-size: 100% 100%;
 }
-
 .recommend-left .best-choice {
     width: 60px;
     height: 70px;
     line-height: 60px;
     background: url("../img/多边形-2.png") no-repeat;
 }
-
 .recommend-right .best-choice {
     width: 50px;
     height: 58px;
     line-height: 50px;
     background: url("../img/多边形-1.png") no-repeat;
 }
-
 .best-choice-info {
     padding: 20px;
     background-color: #38414c;
     font-size: 14px;
     color: #eeeeee;
 }
-
 .best-choice-title {
     font-size: 16px;
 }
-
 .best-choice-info>div {
     margin-bottom: 10px;
 }
-
 .best-choice-info p {
     vertical-align: top;
 }
-
 .recommend-price {
     font-size: 20px;
     color: #ffa700;
 }
-
 .line {
     width: 100%;
     border-top: 1px solid #e0e0e0;
 }
-
 .introduction {
     font-size: 14px;
     margin-top: 20px;
     line-height: 18px;
 }
 
-
 /*recommend-right*/
 
 .recommend-right {
     width: 692px;
 }
-
 .recommend-box {
     width: 346px;
     height: 302px;
@@ -492,27 +138,22 @@ fa {
     padding-left: 16px;
     padding-bottom: 29px;
 }
-
 .recommend-box .best-choice-box {
     width: 330px;
     height: 222px;
 }
-
 .recommend-box .best-choice-box img {
     width: 100%;
     height: 100%;
 }
-
 .recommend-right .recommend-info {
     color: #000;
     margin-top: 12px;
     font-size: 14px;
 }
-
 .recommend-info>div span {
     vertical-align: bottom;
 }
-
 
 /*for hot city*/
 
@@ -521,38 +162,30 @@ h4 {
     font-weight: 700;
     padding-left: 10px;
 }
-
 .hot-city {
     margin-bottom: 31px;
 }
-
 .hot-city-title {
     height: 40px;
     margin-bottom: 10px;
 }
-
 .hot-city-title h4 {
     border-left: 5px solid #00a699;
 }
-
 .hot-city-title a {
     color: #111;
 }
-
 .cities {
     display: inline-block;
     position: relative;
 }
-
 .cities img {
     width: 281px;
     height: 189px;
 }
-
 .cities:not(:last-child) {
     margin-right: 22px;
 }
-
 .city-info {
     width: 130px;
     height: 130px;
@@ -569,35 +202,28 @@ h4 {
     text-align: center;
     color: #ffffff;
 }
-
 .city-info>div p {
     padding-bottom: 3px;
 }
-
 .city-info>div:first-child {
     border-bottom: 1px solid #ffffff;
 }
-
 .city-info>div:first-child p:first-child {
     font-size: 18px;
     font-weight: 600;
 }
-
 .city-info>div:first-child p:last-child {
     font-size: 14px;
 }
-
 .city-info>div:last-child {
     font-size: 12px;
     color: #ffffff;
     padding: 5px;
 }
-
 .city-info>div:last-child span {
     font-size: 24px;
     color: #ffa700;
 }
-
 
 /*for partner*/
 
@@ -607,65 +233,23 @@ h4 {
     margin-bottom: 20px;
     background-color: #38414c;
 }
-
 .partner h4 {
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
-
 .partner-box {
     padding: 30px 0;
 }
-
 .partner-box img:not(:last-child) {
     margin-right: 20px;
 }
-
-.carousel-inner>.item>a>img,
-.carousel-inner>.item>img,
-.img-responsive,
-.thumbnail a>img,
-.thumbnail>img {
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
     display: inline-block;
 }
-
 .partner .carousel-indicators {
     bottom: -20px;
 }
-
 .partner .carousel-indicators .active {
     background-color: #00a699;
     border: none;
-}
-
-
-/*for footer*/
-
-footer {
-    padding: 20px 20px 70px;
-    text-align: center;
-}
-footer a{
-    color: #333;
-}
-footer ul {
-    margin-bottom: 20px;
-}
-
-footer ul li {
-    display: inline-block;
-    font-size: 14px;
-    color: #777;
-}
-
-footer ul li:not(:last-child) {
-    padding-right: 10px;
-}
-
-footer ul:first-child li {
-    padding-left: 10px;
-}
-
-footer ul:first-child li:not(:last-child) {
-    border-right: 1px solid #777;
 }

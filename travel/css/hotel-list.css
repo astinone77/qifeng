@@ -7,6 +7,10 @@ input[type="checkbox"] {
 
 .book-wedget {
     padding: 10px;
+}
+
+.book-wedget,
+.recommendation {
     background-color: #eee;
 }
 
@@ -26,17 +30,45 @@ input[type="checkbox"] {
     box-shadow: none;
 }
 
+.search-hotel {
+    margin-bottom: 20px;
+}
+
 .filter-hotel li {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
     color: #666;
+    margin-top: 12px;
+    margin-bottom: 12px;
     cursor: pointer;
 }
 
-.filter-hotel li>input,
-.filter-hotel li>label,
-.filter-hotel li>img {
+.filter-hotel {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+select {
+    
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.filter-hotel select {
+    /* width: 100%; */
+    padding-right: 20px;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../img/xiashanjiao_07.png") no-repeat right center;
+}
+
+.filter-hotel li>* {
     vertical-align: middle;
 }
 
@@ -44,8 +76,21 @@ input[type="checkbox"] {
     margin-left: 15px;
 }
 
+.filter-hotel .tx-left input[type="text"] {
+    width: 50px;
+    text-align: center;
+}
+
+.filter-hotel .wd-small.tx-left.active {
+    color: #00a699;
+}
+
 .tx-left {
     text-align: left;
+}
+
+.tx-center {
+    text-align: center;
 }
 
 .wd-big {
@@ -53,5 +98,217 @@ input[type="checkbox"] {
 }
 
 .wd-sam {
-    width: 120px;
+    width: 110px;
+}
+
+.wd-more a {
+    color: #00a699;
+}
+
+.filter-btn {
+    border-right: 1px solid #999;
+}
+.filter-btn img.active{
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg); 	/* IE 9 */
+    -moz-transform:rotate(360deg); 	/* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+    -o-transform:rotate(360deg); 	/* Opera */
+}
+
+.recommendation li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.recommendation li:last-child {
+    margin-left: 170px;
+}
+
+.btn-add,
+.btn-lower {
+    width: 14px;
+    height: 14px;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-add {
+    background: url('../img/jiajian_03.png') no-repeat;
+    background-position: 0% 0%;
+}
+
+.btn-lower {
+    background: url('../img/jiajian_03.png') no-repeat;
+    background-position: 100% 0%;
+}
+
+.left-width-908,
+.right-width-260,
+.hotel-info>div,
+.pages-flag>ul>li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.left-width-908 {
+    width: 908px;
+}
+
+.left-width-908>li {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.hotel-info {
+    margin-bottom: 20px;
+}
+
+.hotel-info-img {
+    width: 300px;
+    height: 176px;
+}
+
+.hotel-info-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.hotel-info-details {
+    width: 380px;
+    padding: 20px 30px;
+}
+
+.hotel-info-details>*:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.view-img {
+    color: #ffa700;
+}
+
+.hotel-info-flag {
+    margin-right: 15px;
+}
+
+.hotel-info-price {
+    width: 97px;
+    padding: 0 35px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    border-left: 1px solid #eee;
+}
+
+.hotel-info-price p {
+    margin-bottom: 10px;
+}
+
+.hotel-info-price .price {
+    font-size: 12px;
+}
+
+.hotel-info-price .price span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hotel-info-price button {
+    margin-top: 5px;
+}
+
+.commentary {
+    font-weight: 600;
+}
+
+.right-width-260 {
+    width: 260px;
+    margin-left: 20px;
+}
+
+.right-width-260 .map,
+.right-width-260 .record {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.right-width-260 .map {
+    height: 345px;
+}
+
+.right-width-260 .map img {
+    width: 100%;
+    height: 100%;
+}
+
+.record-title {
+    padding: 10px;
+    background-color: #efefef;
+}
+
+.record-list {
+    padding: 10px;
+}
+
+.record-list div>* {
+    margin-bottom: 10px;
+}
+
+.record-list div>div>span {
+    font-size: 16px;
+}
+
+.record-list img {
+    width: 80px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.pages-flag {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.pages-flag>div {
+    margin-left: 15px;
+}
+
+.pages-flag>ul,
+.pages-flag>div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pages-flag>div input {
+    width: 35px;
+    text-align: center;
+}
+
+.pages-flag ul li {
+    padding: 3px 10px;
+    border: 1px solid #c0c0c0;
+    color: #00a699;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-left {
+    width: 8px;
+    height: 16px;
+    background: url('../img/left-2_03.png') no-repeat;
+    background-position: center;
+}
+
+.btn-next {
+    width: 57px;
+    height: 16px;
+    background: url('../img/right-3_03.png') no-repeat;
+    background-position: 85% 50%;
+}
+
+.iBtn-sure {
+    background: none;
+    border: 1px solid #aaa;
+    box-shadow: none;
+    padding: 3px 5px;
 }

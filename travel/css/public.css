@@ -10,7 +10,8 @@ p,
 h4,
 button,
 ul,
-li {
+li,
+img {
   margin: 0;
   padding: 0;
 }
@@ -76,6 +77,7 @@ li {
   float: right;
 }
 
+
 /*清除浮动 　　　*/
 
 .clearFixed:after {
@@ -87,6 +89,7 @@ li {
   clear: both;
   overflow: hidden;
 }
+
 
 /*为了兼容IE　*/
 
@@ -104,7 +107,29 @@ li {
   color: #00a699;
 }
 
+.color-ffa700 {
+  color: #ffa700;
+}
+
+.color-333 {
+  color: #333;
+}
+
+.color-666 {
+  color: #666;
+}
+
+.color-777 {
+  color: #777;
+}
+
+.color-999 {
+  color: #999;
+}
+
+
 /*for website public style end*/
+
 
 /*for header start*/
 
@@ -125,13 +150,14 @@ li {
   color: #ffffff;
 }
 
-.nav-top-left > span {
+.nav-top-left>span {
   margin-right: 28px;
 }
 
-.nav-top-right > span {
+.nav-top-right>span {
   margin-left: 28px;
 }
+
 
 /*for nav-main*/
 
@@ -157,26 +183,26 @@ li {
   margin-left: 215px;
 }
 
-.nav-main > li {
+.nav-main>li {
   display: inline-block;
   width: 121px;
   font-size: 16px;
   text-align: center;
 }
 
-.nav-main > li a {
+.nav-main>li a {
   color: #333;
   font-weight: 600;
 }
 
-.nav-main > li a p {
+.nav-main>li a p {
   /* width: 100%; */
   /* height: 18px; */
   box-sizing: border-box;
   border-right: 1px solid #333333;
 }
 
-.nav-main > li:nth-child(4) {
+.nav-main>li:nth-child(4) {
   width: 191px;
 }
 
@@ -184,7 +210,9 @@ li {
   color: #00a699;
 }
 
+
 /*for header end*/
+
 
 /*a line after header  */
 
@@ -202,41 +230,42 @@ li {
   letter-spacing: 1px;
 }
 
+
 /*a line after header end */
 
 .book-wedget {
   position: relative;
 }
 
-.book-wedget form > ul {
+.book-wedget form>ul {
   margin: 0;
   padding: 0;
   max-height: 47px;
 }
 
-.book-wedget form > ul li,
+.book-wedget form>ul li,
 .widget-city-list ul li {
   display: inline-block;
   vertical-align: top;
   color: #ccc;
 }
 
-.book-wedget form > ul li.oCheckbox {
+.book-wedget form>ul li.oCheckbox {
   width: 165px;
 }
 
-.book-wedget form > ul li:not(:first-child):not(:last-child) {
+.book-wedget form>ul li:not(:first-child):not(:last-child) {
   /* width: 151px; */
   box-sizing: border-box;
   /* padding: 0 15px; */
 }
 
-.book-wedget form > ul li p {
+.book-wedget form>ul li p {
   font-size: 14px;
   text-indent: 15px;
 }
 
-.book-wedget form > ul li input[type="checkbox"] {
+.book-wedget form>ul li input[type="checkbox"] {
   font-size: 16px;
 }
 
@@ -254,11 +283,11 @@ li {
   width: 252px;
 }
 
-.book-wedget form > ul li.hotels {
+.book-wedget form>ul li.hotels {
   margin-left: 0;
 }
 
-.book-wedget form > ul li.oButton {
+.book-wedget form>ul li.oButton {
   width: 171px;
   position: absolute;
   /* top: 43px; */
@@ -266,12 +295,13 @@ li {
   right: 10px;
 }
 
-.book-wedget form > ul li button {
+.book-wedget form>ul li button {
   width: 100%;
   border: none;
   padding: 10px 0;
   background-color: #00a699;
 }
+
 
 /*for 日历  */
 
@@ -280,12 +310,14 @@ li {
   position: absolute;
   z-index: 999;
 }
-.sc-calendar.live-in{
+
+.sc-calendar.live-in {
   display: block;
   right: 11px;
 }
-.sc-calendar.leave-out{
-  display: block;  
+
+.sc-calendar.leave-out {
+  display: block;
   right: -169px;
 }
 
@@ -310,9 +342,9 @@ li {
 }
 
 .widget-city-list {
-  position: absolute;    
+  position: absolute;
   z-index: 999;
-   display: none; 
+  display: none;
   width: 436px;
   border: 2px solid #eee;
   background-color: #ffffff;
@@ -321,17 +353,20 @@ li {
   transition: .5s;
 }
 
-.widget-city-list.active{
+.widget-city-list.active {
   display: block;
 }
+
 .widget-city-list.city-location {
   top: -105px;
   left: 75px;
 }
+
 .widget-city-list.city-destination {
   top: 35px;
   left: 0;
 }
+
 .widget-city-list.city-hotel {
   top: 35px;
   left: 233px;
@@ -374,24 +409,26 @@ li {
   background-color: #eee;
 }
 
+
 /* for afterClick  */
 
-.hotel-reservation .book-wedget form > ul.afterClick .destination input {
+.hotel-reservation .book-wedget form>ul.afterClick .destination input {
   width: 310px;
 }
 
-.hotel-reservation .book-wedget form > ul.afterClick li.hotels input {
+.hotel-reservation .book-wedget form>ul.afterClick li.hotels input {
   width: 150px;
   display: inline-block;
 }
 
-.hotel-reservation .book-wedget form > ul.afterClick .hotels input {
+.hotel-reservation .book-wedget form>ul.afterClick .hotels input {
   display: block;
 }
 
-.hotel-reservation .book-wedget form > ul.afterClick .oCheckbox {
+.hotel-reservation .book-wedget form>ul.afterClick .oCheckbox {
   display: none;
 }
+
 
 /*for footer*/
 
@@ -401,7 +438,7 @@ footer {
 }
 
 footer a {
-  color: #333 !important;
+  color: #777 !important;
 }
 
 footer ul {
